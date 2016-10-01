@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		BizList
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		  
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery.min.js"></script>
+
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link href="/assets/stylesheets/buy.css" rel="stylesheet" type="text/css" />
+	<style>
+#top {
+ width:100%;
+ height:100px;
+ background:#ff9933;
+ border:2px solid black;
+ margin-left:-2px;
+ margin-top:-2px;
+}
+
+#below {
+ width:100%;
+ height:80px;
+ background:#ff9933;
+ border:2px solid black;
+ margin-left:-2px;
+}
+
+.headerimg {
+  float:left;
+  margin-top:.5%;
+  margin-left:2%;
+  height:80%;
+}
+#inner {
+float:left;
+margin-top:1%;
+margin-left:2%;
+width:17%;
+border:2px solid black;
+height: 20px;
+font-weight:900;
+text-align:center;
+color:black;
+border-radius:5px;
+padding:1%;
+background:white;
+min-width: 100px; /*not necessary if the button has text on it*/
+border: 2px solid black;
+/* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(115,187,223,1) 0%,rgba(23,86,127,1) 100%);
+/* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(115,187,223,1) 0%,rgba(23,86,127,1) 100%);
+/* IE10+ */
+background: linear-gradient(to bottom, rgba(115,187,223,1) 0%,rgba(23,86,127,1) 100%);
+/* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73bbe9', endColorstr='#17567f',GradientType=0 ); IE6-9 */
+filter: none; /*IE6-9 */
+-moz-box-shadow:
+0px -1px 3px rgba(190,255,255,0.5), /*top external highlight*/
+2px 3px 3px rgba(0,0,0,0.2), /*bottom external shadow*/
+inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
+-webkit-box-shadow:
+0px -1px 3px rgba(190,255,255,0.5), /*top external highlight*/
+2px 3px 3px rgba(0,0,0,0.2), /*bottom external shadow*/
+inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
+box-shadow:
+0px -1px 3px rgba(190,255,255,0.5), /*top external highlight*/
+2px 3px 3px rgba(0,0,0,0.2), /*bottom external shadow*/
+inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
+}
+#inner:hover {
+background:#99ccff;
+}
+
+#search {
+float:left;
+margin-top:1%;
+margin-left:2%;
+
+border:2px solid black;
+height: 20px;
+font-weight:900;
+text-align:center;
+color:white;
+background:#99ccff;
+border-radius:5px;
+padding:1%;
+border: 2px solid black;
+/* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(255,0,0,1) 0%,rgba(115,0,0,1) 100%);
+/* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(255,0,0,1) 0%,rgba(115,0,0,1) 100%);
+/* IE10+ */
+background: linear-gradient(to bottom, rgba(255,0,0,1) 0%,rgba(115,0,0,1) 100%);
+/* W3C */
+
+filter: none; /*IE6-9 */
+-moz-box-shadow:
+0px -1px 3px rgba(190,255,255,0.5), /*top external highlight*/
+2px 3px 3px rgba(0,0,0,0.2), /*bottom external shadow*/
+inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
+-webkit-box-shadow:
+0px -1px 3px rgba(190,255,255,0.5), /*top external highlight*/
+2px 3px 3px rgba(0,0,0,0.2), /*bottom external shadow*/
+inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
+box-shadow:
+0px -1px 3px rgba(190,255,255,0.5), /*top external highlight*/
+2px 3px 3px rgba(0,0,0,0.2), /*bottom external shadow*/
+inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
+width:8%;
+}
+
+#search:hover {
+background:#990000;
+}
+
+ #map_canvas
+        {
+            padding:0px;
+            width: 100%;
+            height: 460px;
+
+        }
+
+#listingframe {
+margin-top:-2px;
+background:white;
+width:100%;
+min-height:20%;
+border:2px solid black;
+margin-left:-2px;
+}
+
+#listing {
+
+background:#ff9933;
+padding:1%;
+
+margin:1%;
+margin-left:1%;
+width:96%;
+
+
+border:2px solid black;
+border-radius:5px;
+ overflow: auto;
+  zoom: 1;
+}
+
+#pic {
+float:left;
+height:18%;
+max-height:120px;
+height:auto;
+border:2px solid black;
+border-radius:4px;
+}
+
+#txt {
+float:left;
+width:80%;
+background:white;
+margin-left:1%;
+border:2px solid black;
+border-radius:4px;
+padding:1%;
+font-weight:900;
+
+}
+#txt2 {
+ float:left;
+ width:80%;
+ padding:1%;
+}
+.txtright {
+float:right;
+}
+
+#login {
+float:right;
+margin-top:1%;
+margin-right:1%;
+color:black;
+background:white;
+border:2px solid black;
+border-radius:4px;
+padding:1%;
+padding-top:.5%;
+padding-bottom:.5%;
+}
+
+#loggedin {
+float:right;
+margin-top:.25%;
+color:black;
+padding:1%;
+
+}
+
+#feature {
+width:100%;
+font-size:14px;
+
+border:1px solid black;
+border-radius:2px;
+padding:1.5%;
+padding-left:3%;
+padding-right:5%;
+margin-top:2%;
+margin-bottom:2%;
+margin-left:2%;
+}
+
+#feature:hover {
+background:white;
+}
+
+#leftbox {
+float:left;
+margin-top:.5%;
+margin-left:2%;
+}
+
+#login:hover {
+color:white;
+border:2px solid white;
+background:black;
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+  .labels {
+     color: red;
+     background-color: white;
+     font-family: "Lucida Grande", "Arial", sans-serif;
+     font-size: 10px;
+     font-weight: bold;
+     text-align: center;
+     width: 40px;
+     border: 2px solid black;
+     white-space: nowrap;
+   }
+
+</style>
+   <script src="https://maps.googleapis.com/maps/api/js"></script>
+ <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn-history/r131/trunk/markerwithlabel/src/markerwithlabel.js"></script>
+       <script type="text/javascript">
+           function init_map(map_canvas_id, lat, lng, zoomLevel) {
+               var myLatLng = new google.maps.LatLng(lat, lng);
+
+               var options = {
+                   zoom: zoomLevel,
+                   center: myLatLng,
+                   mapTypeId: google.maps.MapTypeId.ROADMAP
+               };
+
+               var map_canvas = document.getElementById(map_canvas_id);
+
+               var map = new google.maps.Map(map_canvas, options);
+
+var image="http://maps.google.com/mapfiles/ms/icons/blue.png";
+
+   var homeLatLng = new google.maps.LatLng(40.678666986414356, -73.98372799158096);
+   var homeLatLng2 = new google.maps.LatLng(40.678666986414356, -73.95322799158096); 
+
+
+
+  var marker = new MarkerWithLabel({
+       position: homeLatLng,
+       draggable: false,
+       map: map,
+icon: image,
+       labelText: "$425K",
+       labelClass: "labels", // the CSS class for the label
+       labelStyle: {top: "0px", left: "-21px", opacity: 0.75},
+       labelVisible: true
+     });
+
+  var marker2 = new MarkerWithLabel({
+       position: homeLatLng2,
+       draggable: false,
+       
+icon: image,
+       labelText: "$600K",
+       labelClass: "labels", // the CSS class for the label
+       labelStyle: {top: "0px", left: "-21px", opacity: 0.75},
+       labelVisible: true
+     });
+
+    
+
+    
+
+
+           }
+   </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52746194-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body background-color="black" style="overflow-x: hidden">
+			<header>
+	    <nav class="navbar navbar-inverse" style="margin-bottom: 0px;">
+	      <div class="container-fluid">
+	        <div class="navbar-header">
+	               <a href="Home"><img src="/assets/images/logo2.png" class="logo" style="width: 60px;"> </img></a>
+	        </div>
+	        <div>
+	           <ul class="nav navbar-nav" >
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="Home">Home<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+						<li><a href="#">Buyer/Renter</a></li>
+						<li><a href="#">Seller/Broker</a></li>
+						<li><a href="#">Admin</a></li>
+						</ul>
+					 </li>
+					 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Accounts<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+						<li><a href="#">Sign Up</a></li>
+						<li><a href="#">Login Up</a></li>
+						<li><a href="#">Billing</a></li>
+						<li><a href="#">My Account</a></li>
+						<li><a href="#">My Profile</a></li>
+						</ul>
+					 </li>
+					 	 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="Listing">Listing<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+						<li><a href="Listing">All Listing</a></li>
+						<li><a href="#">Create/Modify</a></li>
+						<li><a href="#">Listing Display</a></li>
+						<li><a href="#">Listing Report(Seller)</a></li>
+						<li><a href="#">LIsting Notification(Buyer)</a></li>
+						</ul>
+					 </li>
+					  </li>
+					 	 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="Listing">Searches<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+						<li><a href="Buy">Basic Search</a></li>
+						<li><a href="#">Premium Search</a></li>
+						<li><a href="#">Search Notification</a></li>
+						<li><a href="#">View Search</a></li>
+						</ul>
+					 </li>
+					  </li>
+					 	 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="Listing">Messaging/Appoinments<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+						<li><a href="#">Calendar/Appoinment</a></li>
+						<li><a href="#">Appoinment Creation</a></li>
+						<li><a href="#">Messaging management</a></li>
+						<li><a href="#">Individual Messaging</a></li>
+						</ul>
+					 </li>
+					  </li>
+					 	 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="Listing">Help<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+						<li><a href="#">FAQ Listing</a></li>
+						<li><a href="About">About US</a></li>
+						<li><a href="#">Contact Form</a></li>
+						<li><a href="ContactUs">Contact US</a></li>
+						</ul>
+					 </li>
+
+		           
+
+		        </ul>
+		      <!--   <ul  class="nav navbar-nav" id="banner" >BizList </ul> -->
+		       <!--  <ul class="nav navbar-nav navbar-right" style="width: 400px; padding-top: 10px;">
+		           
+		            <li><input type="text" placeholder="Username" id="username"  class="form-control"  ></input></li><li style="width:5%;"></li>
+		            <li><input type="text" placeholder="Password" id="password"  class="form-control" ></input></li>
+		         	<ii></ii>
+		            <li><button class="btn btn-primary" type="button" style=" padding-top: 10px; height: 35px;">Login</button></li>
+         		</ul> -->
+	        </div>
+	      </div>
+	    </nav>
+</header>
+		<section class="containers">
+		
+		<div class="listHeader">
+		
+		<input type="text" placeholder="Enter an address, neighborhood, city or ZIP code" style="width: 350px; padding-left: 10px;"></input>
+	 <button type="button" class="btn btn-info dropdown-toggle" 
+		     data-toggle="dropdown">Search</button>
+		
+		<div class="btn-group">
+		      <button type="button" class="btn btn-info dropdown-toggle" 
+		     data-toggle="dropdown">Listings <span class="caret"></span></button>
+		      <ul class="dropdown-menu" role="menu">
+		        <li><a href="#">For Buy</a></li>
+		        <li><a href="#">For Sale</a></li>
+		        <li><a href="#">Potential Listings</a></li>
+		        <li class="divider"></li>
+		        <li><a href="#">Open Houses Only</a></li>
+		      </ul>
+		    </div>
+		    <div class="btn-group">
+		      <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+			                Any Price <span class="caret"></span></button>
+		      <ul class="dropdown-menu" role="menu">
+		        <li><a href="#">$50,000 +</a></li>
+		        <li><a href="#">$75,000 +</a></li>
+		        <li><a href="#">$100,000 +</a></li>
+		        <li class="divider"></li>
+		        <li><a href="#">Any Price</a></li>
+		      </ul>
+		    </div>
+		    <div class="btn-group">
+		      <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+			             0+ Beds <span class="caret"></span></button>
+		      <ul class="dropdown-menu" role="menu">
+		        <li><a href="#">1+</a></li>
+		        <li><a href="#">2+</a></li>
+		        <li><a href="#">3+</a></li>
+		        <li class="divider"></li>
+		        <li><a href="#">More</a></li>
+		      </ul>
+		    </div>
+		    <div class="btn-group">
+		      <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+			             Type <span class="caret"></span></button>
+		      <ul class="dropdown-menu" role="menu">
+		        <li><a href="#">Apartment</a></li>
+		        <li><a href="#">Building</a></li>
+		        <li><a href="#">Free Space</a></li>
+		        <li class="divider"></li>
+		        <li><a href="#">Manufactured</a></li>
+		      </ul>
+		    </div>
+		    
+		    <div class="btn-group" style="padding-left: 30%;">
+		      <button type="button" class="btn btn-info ">
+			             Save Search </button>
+		      
+		    </div>	
+		    </div>	
+		    	<div id="map_canvas" class="map" align="right"></div>
+
+					<script type="text/javascript">
+					init_map('map_canvas', 40.6786, -73.9837, 14);
+					</script>
+							
+		</section>
+	<footer>
+		 <nav class="navbar navbar-inverse" style="margin-bottom: 0px;">
+	      <div class="container-fluid">
+	        <div>
+		        <ul class="nav navbar-nav navbar">
+		            <li><a href="About"> About</a></li>
+		            <li><a href="#"> Research</a></li>
+		            <li><a href="#"> Help</a></li>
+         		</ul>
+         		<ul class="nav navbar-nav navbar-right">
+		            <li><a href="ContactUs"> Contact Us</a></li>
+		            <li><a href="#"> Support</a></li>
+		            <li><a href="#"> Blog</a></li>
+         		</ul>
+	        </div>
+	      </div>
+	    </nav>
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+$default-text-shadow-color: rgba(#868A08, 0.6);
+$default-text-shadow-blur: 6px;
+$default-text-shadow-v-offset: 5px;
+
+@import "compass";
+@import "compass/reset";
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+$baseFontFamily: 'Titillium Web', Verdana;
+
+body {
+	
+	background: no-repeat fixed 100% 100%;
+	color:black;
+	font-family: 'Titillium Web', Verdana;
+
+	}
+
+
+header {
+	h1 {
+		font-size: 60px;
+		margin: 10px;
+		color:  white;
+	}
+}
+
+.has-single-shadow {
+  @include single-text-shadow;
+  height: 30%;
+  width:30%;
+  font-size:40px;
+  font-color:black
+
+
+}
+
+.logo
+{
+	height: 40px;
+	width: 30px;
+}
+
+.front-image
+{
+	width:100%;
+	height:100%;
+}
+.containers{
+	display: flex;
+	flex-flow:row wrap; // without this they will all be on one wide row
+	justify-content: space-between;
+	}
+
+
+
+	.cont-1 {
+		flex: 3;
+		height: 500px;
+		min-width: 100%;
+		box-sizing: border-box;
+		background-image: url("/assets/images/home.jpg");
+		background-repeat: no-repeat;
+    	background-position: center;
+    	background-color: #211F1F;
+		opacity: 0.9;
+		background-size:contain;
+		margin: 0px;
+		padding: 0px;
+		
+	}
+
+	
+
+	.cont-md {
+		flex: 2;
+		height: 250px;
+		box-sizing: border-box;
+		min-width: 30%;
+		background-image: url("http://www.zillow.com/blog/files/2013/01/denver.jpg");
+		background-repeat: no-repeat;
+    	background-position: center;
+		opacity: 0.6;
+		background-size:cover;
+		background-color: #0B6121;
+		margin: 4px;
+		padding: 4px;
+		border: 2px solid #0B6121;
+		@include box-shadow(#868A08 2px 2px 10px);
+	}
+
+	.cont-md:hover {
+		opacity: 1.0;
+
+   }
+
+	.cont-md1 {
+		flex: 2;
+		height: 250px;
+		box-sizing: border-box;
+		min-width: 30%;
+		background-image: url("https://sabbaticalhomes-listing-image.s3.amazonaws.com/Processed/86146_Home_Rent_House_Rental_London_Ontario_Canada_Filename1_Front.jpg");
+		background-repeat: no-repeat;
+    	background-position: center;
+		opacity: 0.6;
+		background-size:cover;
+		background-color: #0B6121;
+		margin: 4px;
+		padding: 4px;
+		border: 2px solid #0B6121;
+		@include box-shadow(#868A08 2px 2px 10px);
+	}
+
+	.cont-md1:hover {
+		opacity: 1.0;
+
+   }
+
+	.cont-md2 {
+		flex: 2;
+		height: 250px;
+		box-sizing: border-box;
+		min-width: 30%;
+		background-image: url("http://1cqgxm3l59yi2wwbnn3qy35h.wpengine.netdna-cdn.com/wp-content/uploads/2013/12/14-Woodbury-St-South-Portland-ME-for-sale.jpg");
+		background-repeat: no-repeat;
+    	background-position: center;
+		opacity: 0.6;
+		background-size:cover;
+		background-color: #868A08;
+		margin: 4px;
+		padding: 4px;
+		border: 2px solid #0B6121;
+		@include box-shadow(#0B6121 2px 2px 10px);
+	}
+
+	.cont-md2:hover {
+		opacity: 1.0;
+
+   }
+
+   .cont-btm
+   {
+   		flex: 2;
+		height: 50px;
+		box-sizing: border-box;
+		min-width: 100%;
+   }
+
+	.cont-2 {
+		flex: 1;
+		height: 250px;
+		min-width: 20%;
+		box-sizing: border-box;
+		img{
+		height:50%;
+		width:50%;
+		float:center;
+		}
+	}
+	.cont-3 {
+		flex: 4;
+		min-width: 80%;
+		margin: 0px;
+		padding: 0px;
+		float:center;
+	}
+
+		.cont-4 {
+		flex: 4;
+		height: 250px;
+		min-width: 100%;
+		margin: 0px;
+		padding: 0px;
+		float:center;
+	}
+
+
+
+#svg-gradient {
+  $svg-gradient-shim-threshold: 1 !global;
+  @include background-image(linear-gradient(to right, #2ac363, #cd8c14, #0B6121));
+  width: 30%;
+  margin: 10px;
+}
+
+#banner
+{
+	font-size:25px;
+	width:200px;
+	color:white;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.cls1
+{
+	top:20%;
+	left:40%;
+}
+
+.h1style
+{
+	width:30%; 
+	margin: 0 auto; 
+	color: white;
+}
+
+@media screen and (max-width : 568px) {
+	.containers {flex-flow: column wrap;
+		}
+}

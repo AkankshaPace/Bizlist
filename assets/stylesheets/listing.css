@@ -1,0 +1,363 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+/* line 5, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 10, ../sass/Week-3.scss */
+body {
+  background: no-repeat fixed 100% 100%;
+  color: black;
+  font-family: 'Titillium Web', Verdana;
+}
+
+/* line 20, ../sass/Week-3.scss */
+header h1 {
+  font-size: 60px;
+  margin: 10px;
+  color: white;
+}
+
+/* line 27, ../sass/Week-3.scss */
+.has-single-shadow {
+  text-shadow: 0px 5px 6px rgba(27, 79, 114 , 0.6);
+  height: 30%;
+  width: 30%;
+  font-size: 40px;
+  font-color: black;
+}
+
+/* line 37, ../sass/Week-3.scss */
+.logo {
+  height: 40px;
+  width: 30px;
+}
+
+/* line 43, ../sass/Week-3.scss */
+.front-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 48, ../sass/Week-3.scss */
+.containers {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+/* line 56, ../sass/Week-3.scss */
+.cont-1 {
+  flex: 3;
+  height: 500px;
+  min-width: 50%;
+  width: 50%;
+  box-sizing: border-box;
+  background-image: url("http://www.zillow.com/blog/files/2013/01/denver.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color:#3498DB;
+  opacity: 0.9;
+  background-size: contain;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/* line 72, ../sass/Week-3.scss */
+
+
+/* line 77, ../sass/Week-3.scss */
+.cont-md {
+  flex: 2;
+  height: 250px;
+  box-sizing: border-box;
+  min-width: 30%;
+  background-image: url("http://www.zillow.com/blog/files/2013/01/denver.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+  background-size: cover;
+  background-color: #0B6121;
+  margin: 4px;
+  padding: 4px;
+  border: 2px solid #0B6121;
+  -moz-box-shadow: #1B4F72 2px 2px 10px;
+  -webkit-box-shadow: #1B4F72 2px 2px 10px;
+  box-shadow: #1B4F72 2px 2px 10px;
+}
+
+/* line 94, ../sass/Week-3.scss */
+.cont-md:hover {
+  opacity: 1.0;
+}
+
+.cont1-md {
+  flex: 2;
+  height: 250px;
+  box-sizing: border-box;
+  min-width: 30%;
+  background-image: url("/assets/images/img1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+  background-size: cover;
+  background-color: #0B6121;
+  margin: 4px;
+  padding: 4px;
+  border: 2px solid #0B6121;
+  -moz-box-shadow: #1B4F72 2px 2px 10px;
+  -webkit-box-shadow: #1B4F72 2px 2px 10px;
+  box-shadow: #1B4F72 2px 2px 10px;
+}
+
+/* line 94, ../sass/Week-3.scss */
+.cont1-md:hover {
+  opacity: 1.0;
+}
+/* line 99, ../sass/Week-3.scss */
+.cont-md1 {
+  flex: 2;
+  height: 250px;
+  box-sizing: border-box;
+  min-width: 30%;
+  background-image: url("https://sabbaticalhomes-listing-image.s3.amazonaws.com/Processed/86146_Home_Rent_House_Rental_London_Ontario_Canada_Filename1_Front.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+  background-size: cover;
+  background-color: #0B6121;
+  margin: 4px;
+  padding: 4px;
+  border: 2px solid #0B6121;
+  -moz-box-shadow: #1B4F72 2px 2px 10px;
+  -webkit-box-shadow: #1B4F72 2px 2px 10px;
+  box-shadow: #1B4F72 2px 2px 10px;
+}
+
+/* line 116, ../sass/Week-3.scss */
+.cont-md1:hover {
+  opacity: 1.0;
+}
+
+.cont1-md1 {
+  flex: 2;
+  height: 250px;
+  box-sizing: border-box;
+  min-width: 30%;
+  background-image: url("/assets/images/img2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+  background-size: cover;
+  background-color: #0B6121;
+  margin: 4px;
+  padding: 4px;
+  border: 2px solid #0B6121;
+  -moz-box-shadow: #1B4F72 2px 2px 10px;
+  -webkit-box-shadow: #1B4F72 2px 2px 10px;
+  box-shadow: #1B4F72 2px 2px 10px;
+}
+
+/* line 116, ../sass/Week-3.scss */
+.cont1-md1:hover {
+  opacity: 1.0;
+}
+
+/* line 121, ../sass/Week-3.scss */
+.cont-md2 {
+  flex: 2;
+  height: 250px;
+  box-sizing: border-box;
+  min-width: 30%;
+  background-image: url("http://1cqgxm3l59yi2wwbnn3qy35h.wpengine.netdna-cdn.com/wp-content/uploads/2013/12/14-Woodbury-St-South-Portland-ME-for-sale.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+  background-size: cover;
+  background-color: #868A08;
+  margin: 4px;
+  padding: 4px;
+  border: 2px solid #0B6121;
+  -moz-box-shadow: #1B4F72 2px 2px 10px;
+  -webkit-box-shadow: #1B4F72 2px 2px 10px;
+  box-shadow: #1B4F72 2px 2px 10px;
+}
+
+/* line 138, ../sass/Week-3.scss */
+.cont-md2:hover {
+  opacity: 1.0;
+}
+
+.cont1-md2 {
+  flex: 2;
+  height: 250px;
+  box-sizing: border-box;
+  min-width: 30%;
+  background-image: url("/assets/images/img3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+  background-size: cover;
+  background-color: #868A08;
+  margin: 4px;
+  padding: 4px;
+  border: 2px solid #0B6121;
+  -moz-box-shadow: #1B4F72 2px 2px 10px;
+  -webkit-box-shadow: #1B4F72 2px 2px 10px;
+  box-shadow: #1B4F72 2px 2px 10px;
+}
+
+/* line 138, ../sass/Week-3.scss */
+.cont1-md2:hover {
+  opacity: 1.0;
+}
+
+/* line 143, ../sass/Week-3.scss */
+.cont-btm {
+  flex: 2;
+  height: 50px;
+  box-sizing: border-box;
+  min-width: 100%;
+}
+
+/* line 151, ../sass/Week-3.scss */
+.cont-2 {
+  flex: 1;
+  height: 250px;
+  min-width: 20%;
+  box-sizing: border-box;
+}
+/* line 156, ../sass/Week-3.scss */
+.cont-2 img {
+  height: 50%;
+  width: 50%;
+  float: center;
+}
+
+/* line 162, ../sass/Week-3.scss */
+.cont-3 {
+  flex: 4;
+  min-width: 80%;
+  margin: 0px;
+  padding: 0px;
+  float: center;
+}
+
+/* line 170, ../sass/Week-3.scss */
+.cont-4 {
+  flex: 4;
+  height: 250px;
+  min-width: 100%;
+  margin: 0px;
+  padding: 0px;
+  float: center;
+}
+
+/* line 181, ../sass/Week-3.scss */
+#svg-gradient {
+ background-size: 100%;
+  
+  width: 30%;
+  margin: 10px;
+}
+
+/* line 188, ../sass/Week-3.scss */
+#banner {
+  font-size: 25px;
+  width: 200px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* line 197, ../sass/Week-3.scss */
+.cls1 {
+  top: 20%;
+  left: 40%;
+}
+
+/* line 203, ../sass/Week-3.scss */
+.h1style {
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+}
+
+.signup {
+  flex: 3;
+  
+  box-sizing: border-box;
+  
+  background-color: #5DADE2;
+  opacity: 0.9;
+  margin: 0px;
+  padding: 0px;
+}
+
+@media screen and (max-width: 568px) {
+  /* line 211, ../sass/Week-3.scss */
+  .containers {
+    flex-flow: column wrap;
+  }
+}
